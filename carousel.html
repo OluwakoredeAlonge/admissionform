@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl Carousel with Custom Colored Navigation</title>
+    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        .owl-carousel {
+            position: relative;
+        }
+        .owl-carousel img {
+            width: 100%;
+            height: 400px;
+            object-fit: fill;
+            border-radius: 5px;
+        }
+
+        /* Custom Navigation Buttons */
+        .custom-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #007bff; /* Blue color */
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.3s;
+            opacity: 0.9;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .custom-nav:hover {
+            background: #0056b3; /* Darker blue on hover */
+        }
+        .prev-btn {
+            left: 20px;
+        }
+        .next-btn {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Owl Carousel with Custom Colored Navigation</h2>
+
+        <div class="owl-carousel">
+            <div class="item"><img src="images/about.jpg" alt="Image 1"></div>
+            <div class="item"><img src="images/about.jpg" alt="Image 2"></div>
+            <div class="item"><img src="images/about.jpg" alt="Image 3"></div>
+
+            <!-- Custom Navigation Buttons (Inside the Carousel) -->
+            <button class="custom-nav prev-btn">❮</button>
+            <button class="custom-nav next-btn">❯</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var owl = $(".owl-carousel");
+            owl.owlCarousel({
+                items: 1, // Show 1 image at a time
+                loop: true, // Infinite loop
+                margin: 0, // No space between images
+                autoplay: true, // Auto-slide
+                autoplayTimeout: 3000, // 3 seconds per slide
+                autoplayHoverPause: true, // Pause on hover
+                nav: false, // Hide default navigation
+                dots: true // Show pagination dots
+            });
+
+            // Custom Navigation Buttons
+            $(".prev-btn").click(function(){
+                owl.trigger("prev.owl.carousel");
+            });
+
+            $(".next-btn").click(function(){
+                owl.trigger("next.owl.carousel");
+            });
+        });
+    </script>
+
+</body>
+</html>
