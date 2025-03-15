@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/fa/css/all.css">
+   <style>
+    /* div{
+        border: 2px solid black;
+    } */
+    .icon-box-hmv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 120px;
+            border: 3px solid  #049A07;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .icon-box-hmv i {
+            font-size: 2.5rem; /* Slightly larger icons */
+            color: #049A07;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .inner-hmv h3 {
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Hover Effects */
+        .inner-hmv:hover .icon-box-hmv {
+            border-color:#F5EF67;
+        }
+
+        .inner-hmv:hover .icon-box-hmv i {
+            color:#F5EF67;
+        }
+
+        .inner-hmv:hover h3 {
+            color:#F5EF67;
+        }
+        .title-with-lines {
+            position: relative;
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0 20px;
+            /* Add spacing between the title and lines */
+        }
+
+        .title-with-lines::before,
+        .title-with-lines::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 3px;
+            background: #049A07;
+            box-shadow: 5px 6px #F5EF67;
+            /* Creates second line below */
+        }
+
+        .title-with-lines::before {
+            left: -50px;
+            transform: translateY(-50%);
+        }
+
+        .title-with-lines::after {
+            right: -50px;
+            transform: translateY(-50%);
+        }
+        .gradient-icon {
+            background: linear-gradient(to right, #049A07, #F5EF67);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .title-container {
+            display: flex;
+            justify-content: center;
+            /* Centers horizontally */
+            align-items: center;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+        .overlay .icon {
+            margin: 5px;
+            font-size: 25px;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+        .youtube:hover {
+            color: #FF0000;
+        }
+        .facebook:hover {
+            color: #3b5998;
+        }
+        .instagram:hover {
+            color: #E1306C;
+        }
+        .twitter:hover {
+            color: #1DA1F2;
+        }
+        .linkedin:hover {
+            color: #0077b5;
+        }
+   </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.jpg" class="img-fluid" alt="" style="width: 80px; height: auto;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto"> <!-- Added ms-auto to push links to the end -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link gradient-icon" href="admissionForm.html">Admission Form</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="background-image: url('images/banner.jpg'); height: 300px; background-size: cover;background-position: center;">
+                <div class="title-container">
+                <h2 class="text-center mt-5 text-white title-with-lines gradient-icon" style="font-size: 36px;">ABOUT US</h2>
+                </div>
+                <p class="text-center text-white mt-5">At Mathews' & Margarets' International Schools, we inspire, <br> educate, and shape future leaders through innovative teaching and a supportive environment.</p>
+            </div>
+        </div>
+        <div class="container mt-5 mb-5">
+            <div class="row align-items-center g-4 mb-5">
+                <!-- Image Section -->
+                <div class="col-12 col-md-6">
+                    <img src="images/about.jpg" alt="" class="img-fluid rounded">
+                </div>
+
+                <!-- About Us Text Section -->
+                <div class="col-12 col-md-6">
+                    <div class="title-container">
+                        <h5 class="title-with-lines gradient-icon">About Us</h5>
+                    </div>
+
+                    <h3>Welcome to Mathews' & Margarets' International Schools, Ado-Ekiti</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, sint mollitia quod esse, cumque
+                        deleniti quidem earum quo reiciendis necessitatibus, explicabo suscipit doloribus eveniet
+                        recusandae omnis nisi consectetur exercitationem quae.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quam unde voluptatem debitis! Aliquid
+                        natus minus numquam aperiam, perferendis quo hic possimus exercitationem, dignissimos
+                        repudiandae illo totam rerum fugit modi!</p>
+
+                    <!-- Features Section -->
+                    <div class="row">
+                        <div class="col-6">
+                            <p><i class="fa-solid fa-arrow-right gradient-icon"></i> Skilled Instructors</p>
+                            <p><i class="fa-solid fa-arrow-right gradient-icon"></i> Outstanding Academic Performance</p>
+                            <p><i class="fa-solid fa-arrow-right gradient-icon"></i> Comprehensive Growth</p>
+                        </div>
+                        <div class="col-6">
+                            <p><i class="fa-solid fa-arrow-right gradient-icon"></i> Readiness for the Future</p>
+                            <p><i class="fa-solid fa-arrow-right gradient-icon"></i> Technology-Driven Approach</p>
+                            <p><i class="fa-solid fa-arrow-right gradient-icon"></i> Creative Learning Methods</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- Mission, Vision, and History Section -->
+                <div class="hmv-box py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="inner-hmv text-center p-4 shadow-sm">
+                                    <div class="icon-box-hmv mb-3">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <h3>Mission</h3>
+                                    <p>We are committed to providing a quality learning environment that fosters academic excellence, moral values, and leadership development.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="inner-hmv text-center p-4 shadow-sm">
+                                    <div class="icon-box-hmv mb-3">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <h3>Vision</h3>
+                                    <p>Our vision is to be a center of academic excellence, empowering students to become innovators and global leaders of tomorrow.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="inner-hmv text-center p-4 shadow-sm">
+                                    <div class="icon-box-hmv mb-3">
+                                        <i class="fas fa-history"></i>
+                                    </div>
+                                    <h3>History</h3>
+                                    <p>Established in 2013, Mathews' & Margarets' International Schools has a legacy of academic excellence, nurturing students to excel in their chosen fields for decades.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="title-container">
+                    <h2 class="text-center mt-5 text-white title-with-lines gradient-icon" style="font-size: 36px;">INSTRUCTORS</h2>
+                    </div>
+                    <p class="text-center">Meet our Expert Instructors</p>
+            </div>
+            <div class="col">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-4 text-center mt-3">
+                            <div class="image-container">
+                                <img src="images/logo.jpg" class="img-fluid" alt="">
+                                <div class="overlay">
+                                    <a href="#" class="icon youtube"><i class="fab fa-youtube"></i></a>
+                                    <a href="#" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <h5 class="mt-3">Mrs. Alonge M. O</h5>
+                                <p>Proprietor</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-lg-4 text-center mt-3">
+                            <div class="image-container">
+                                <img src="images/logo.jpg" class="img-fluid" alt="">
+                                <div class="overlay">
+                                    <a href="#" class="icon youtube"><i class="fab fa-youtube"></i></a>
+                                    <a href="#" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <h5 class="mt-3">Dr. Rebecca Harris</h5>
+                                <p>Principal</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-lg-4 text-center mt-3">
+                            <div class="image-container">
+                                <img src="images/logo.jpg" class="img-fluid" alt="">
+                                <div class="overlay">
+                                    <a href="#" class="icon youtube"><i class="fab fa-youtube"></i></a>
+                                    <a href="#" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <h5 class="mt-3">Dr. Rebecca Harris</h5>
+                                <p>Head Mistress</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <footer class="text-dark pt-4 pb-2">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h5 class="text-uppercase">About Us</h5>
+                                <p>We are committed to providing quality education and a conducive learning environment for students to thrive academically and morally.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="text-uppercase">Quick Links</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Admissions</a></li>
+                                    <li><a href="#">Academics</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="text-uppercase">Contact Us</h5>
+                                <p><i class="fas fa-map-marker-alt"></i> 123 School Street, Ekiti, Nigeria</p>
+                                <p><i class="fas fa-phone"></i> +234 812 345 6789</p>
+                                <p><i class="fas fa-envelope"></i> info@schoolname.com</p>
+                            </div>
+                        </div>
+                        <hr class="bg-dark">
+                        <div class="text-center">
+                            <p class="mb-0">&copy; 2025 Mathews' & Margarets' International Schools. All Rights Reserved.</p>
+                            <p class="mb-0">Designed & Developed by <a href="your-portfolio-link" class=" fw-bold" target="_blank">Korede Alonge</a></p>
+                        </div>
+                    </div>
+                </footer>                
+            </div>
+        </div>
+    </div>
+    <script src="assets/jquery.js"></script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>
