@@ -12,6 +12,12 @@
             border: 2px solid black;
             padding: 50px;
         } */
+        .heade {
+            min-height: 450px;
+            background-image: url(images/banner.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
 
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -107,12 +113,14 @@
             transform: scale(1.05);
             /* Slight hover effect */
         }
+
         .navbar {
             position: absolute;
             width: 100%;
             z-index: 10;
             background: transparent;
         }
+
         /* .navbar-brand, .nav-link {
             color: white !important; Ensure visibility
         } */
@@ -120,80 +128,48 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.jpg" class="img-fluid" alt="" style="width: 80px; height: auto;">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto"> <!-- Added ms-auto to push links to the end -->
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactus.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link gradient-icon" href="admissionForm.html">Admission Form</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/carousel.webp" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
     <div class="container-fluid">
+        <div class="row heade">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/logo.jpg" class="img-fluid" alt="" style="width: 80px; height: auto;">
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav ms-auto"> <!-- Added ms-auto to push links to the end -->
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="aboutus.html">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button" class="btn gradient-icon" data-bs-toggle="modal" data-bs-target="#admissionFormModal">
+                                        Buy Admission Form
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="col-md-12">
+                    <h1 class="text-center headtext">Discover Exceptional Care<br> for a <span class="blue">Healthier Tomorrow</span></h1>
+                </div>
+                <div class="col-md-12 w-50 mx-auto">
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores consectetur soluta porro fugit sint neque maxime dolores alias ipsam nihil. Veniam, distinctio quis. Perspiciatis aut nam temporibus ad voluptas nulla.</p>
+                </div>
+            </div>
+        </div>
         <div class="container mt-5 mb-5">
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-3">
@@ -277,7 +253,7 @@
                         </div>
                     </div>
 
-                    <a class="btn btn-gradient mt-4" href="aboutus.html">Read More</a>
+                    <p align="right"><a class="btn btn-gradient mt-4" href="aboutus.html">Read More</a></p>
                 </div>
             </div>
         </div>
@@ -285,7 +261,7 @@
         <div class="row">
             <div class="col">
                 <div class="title-container">
-                <h3 class="text-center title-with-lines gradient-icon">WHAT WE OFFER</h3>
+                    <h3 class="text-center title-with-lines gradient-icon">WHAT WE OFFER</h3>
                 </div>
                 <p class="text-center">We provide a nurturing and stimulating environment where students excel
                     academically, grow socially, and develop essential life skills for a brighter future.</p>
@@ -428,10 +404,43 @@
                             <p class="mb-0">Designed & Developed by <a href="your-portfolio-link" class=" fw-bold" target="_blank">Korede Alonge</a></p>
                         </div>
                     </div>
-                </footer>                
+                </footer>
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="admissionFormModal" tabindex="-1" aria-labelledby="admissionFormLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="admissionFormLabel">Admission Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="admissionForm" onsubmit="payWithPaystack(event)" method="post" action="verifypay.php">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fname">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Amount Payable</label>
+                            <input type="number" class="form-control" id="amount" value="5000" name="amount" readonly>
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="btn_pay">Proceed to Payment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="assets/jquery.js"></script>
 <script src="assets/js/bootstrap.bundle.js"></script>
